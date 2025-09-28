@@ -6,22 +6,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        {/* <Demo /> */}
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
+        <Demo />
         <div className={styles.ctas}>
           <a
             className={styles.primary}
@@ -60,6 +45,25 @@ export default function Home() {
             }}
           >
             React Hooks 教学
+          </a>
+          <a
+            className={styles.primary}
+            href="/ConnectRpc"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+              backgroundColor: '#10b981',
+              color: 'white',
+              padding: '12px 24px',
+              borderRadius: '8px',
+              textDecoration: 'none',
+              fontSize: '14px',
+              fontWeight: '600',
+              transition: 'background-color 0.2s'
+            }}
+          >
+            Web3 RPC连接演示
           </a>
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
