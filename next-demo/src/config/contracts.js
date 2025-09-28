@@ -1,6 +1,7 @@
 export const CONTRACTS = {
   COUNTER: {
-    address: process.env.NEXT_PUBLIC_COUNTER_ADDRESS,
+    // address: process.env.NEXT_PUBLIC_COUNTER_ADDRESS,
+    address: '0x431306040c181E768C4301a7bfD4fC6a770E833F',
     abi: [
       {
         "type": "function",
