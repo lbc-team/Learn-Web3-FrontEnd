@@ -11,18 +11,87 @@ export const CONTRACTS = {
         "stateMutability": "nonpayable"
       },
       {
-        "type": "function", 
+        "type": "function",
         "name": "number",
         "inputs": [],
-        "outputs": [{"name": "", "type": "uint256", "internalType": "uint256"}],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
         "stateMutability": "view"
       },
       {
         "type": "function",
-        "name": "setNumber", 
-        "inputs": [{"name": "newNumber", "type": "uint256", "internalType": "uint256"}],
+        "name": "setNumber",
+        "inputs": [{ "name": "newNumber", "type": "uint256", "internalType": "uint256" }],
         "outputs": [],
         "stateMutability": "nonpayable"
+      }
+    ]
+  },
+  ERC20TOKEN: {
+    // address: process.env.NEXT_PUBLIC_ERC20TOKEN_ADDRESS,
+    address: '0xa7d726B7F1085F943056C2fB91abE0204eC6d6DA',
+    abi: [
+      {
+        "type": "function",
+        "name": "name",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "string", "internalType": "string" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "symbol",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "string", "internalType": "string" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "totalSupply",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "balanceOf",
+        "inputs": [{ "name": "account", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "owner",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "mintedByAddress",
+        "inputs": [{ "name": "", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "MAX_MINT_PER_ADDRESS",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "mint",
+        "inputs": [{ "name": "amount", "type": "uint256", "internalType": "uint256" }],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+      },
+      {
+        "type": "function",
+        "name": "remainingMintAmount",
+        "inputs": [{ "name": "account", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
       }
     ]
   }

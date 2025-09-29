@@ -115,7 +115,6 @@ export default function ReduxDemoPage() {
   return (
     <div style={{ padding: '20px' }}>
       <h1>Redux全局状态管理</h1>
-      
       <div style={{ marginBottom: '20px' }}>
         <a href="/communication" style={{ color: '#2196F3' }}>← 返回Communication首页</a>
       </div>
