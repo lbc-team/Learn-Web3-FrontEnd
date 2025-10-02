@@ -1,7 +1,6 @@
 export const CONTRACTS = {
   COUNTER: {
-    // address: process.env.NEXT_PUBLIC_COUNTER_ADDRESS,
-    address: '0x431306040c181E768C4301a7bfD4fC6a770E833F',
+    address: process.env.NEXT_PUBLIC_COUNTER_ADDRESS,
     abi: [
       {
         "type": "function",
@@ -27,8 +26,7 @@ export const CONTRACTS = {
     ]
   },
   ERC20TOKEN: {
-    // address: process.env.NEXT_PUBLIC_ERC20TOKEN_ADDRESS,
-    address: '0xa7d726B7F1085F943056C2fB91abE0204eC6d6DA',
+    address: process.env.NEXT_PUBLIC_ERC20TOKEN_ADDRESS,
     abi: [
       {
         "type": "function",
@@ -55,6 +53,36 @@ export const CONTRACTS = {
         "type": "function",
         "name": "balanceOf",
         "inputs": [{ "name": "account", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "transfer",
+        "inputs": [
+          { "name": "to", "type": "address", "internalType": "address" },
+          { "name": "amount", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+        "stateMutability": "nonpayable"
+      },
+      {
+        "type": "function",
+        "name": "approve",
+        "inputs": [
+          { "name": "spender", "type": "address", "internalType": "address" },
+          { "name": "amount", "type": "uint256", "internalType": "uint256" }
+        ],
+        "outputs": [{ "name": "", "type": "bool", "internalType": "bool" }],
+        "stateMutability": "nonpayable"
+      },
+      {
+        "type": "function",
+        "name": "allowance",
+        "inputs": [
+          { "name": "owner", "type": "address", "internalType": "address" },
+          { "name": "spender", "type": "address", "internalType": "address" }
+        ],
         "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
         "stateMutability": "view"
       },
@@ -92,6 +120,91 @@ export const CONTRACTS = {
         "inputs": [{ "name": "account", "type": "address", "internalType": "address" }],
         "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
         "stateMutability": "view"
+      }
+    ]
+  },
+  TOKENBANK: {
+    address: process.env.NEXT_PUBLIC_TOKENBANK_ADDRESS,
+    abi: [
+      {
+        "type": "function",
+        "name": "token",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "address", "internalType": "address" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "deposits",
+        "inputs": [{ "name": "", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "totalDeposits",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "deposit",
+        "inputs": [{ "name": "amount", "type": "uint256", "internalType": "uint256" }],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+      },
+      {
+        "type": "function",
+        "name": "withdraw",
+        "inputs": [{ "name": "amount", "type": "uint256", "internalType": "uint256" }],
+        "outputs": [],
+        "stateMutability": "nonpayable"
+      },
+      {
+        "type": "function",
+        "name": "balanceOf",
+        "inputs": [{ "name": "user", "type": "address", "internalType": "address" }],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "function",
+        "name": "getBankBalance",
+        "inputs": [],
+        "outputs": [{ "name": "", "type": "uint256", "internalType": "uint256" }],
+        "stateMutability": "view"
+      },
+      {
+        "type": "event",
+        "name": "Deposit",
+        "inputs": [
+          { "name": "user", "type": "address", "indexed": true },
+          { "name": "amount", "type": "uint256", "indexed": false }
+        ]
+      },
+      {
+        "type": "event",
+        "name": "Withdraw",
+        "inputs": [
+          { "name": "user", "type": "address", "indexed": true },
+          { "name": "amount", "type": "uint256", "indexed": false }
+        ]
+      },
+      {
+        "type": "error",
+        "name": "InvalidAmount",
+        "inputs": []
+      },
+      {
+        "type": "error",
+        "name": "InsufficientBalance",
+        "inputs": []
+      },
+      {
+        "type": "error",
+        "name": "TransferFailed",
+        "inputs": []
       }
     ]
   }

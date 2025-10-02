@@ -1,6 +1,6 @@
 export default function Demo() {
     const message = 'hello Web3'
-    let age = 16
+    let age = 20
     const students= [
             { id: 111, name: "stu1", score: 100 },
             { id: 112, name: "stu2", score: 70 },
