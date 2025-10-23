@@ -26,6 +26,7 @@ export default function ConnectRpc() {
   })
 
   // 读取合约
+  // contactAddress： 0x431306040c181E768C4301a7bfD4fC6a770E833F
   const { data: contractNumber, refetch: refetchContractNumber } = useReadContract({
     address: CONTRACTS.COUNTER.address,
     abi: CONTRACTS.COUNTER.abi,

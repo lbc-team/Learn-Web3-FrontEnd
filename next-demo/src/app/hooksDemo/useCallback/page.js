@@ -19,10 +19,12 @@ export default function UseCallbackDemo() {
 
   const handleIncrement = useCallback(() => {
     setCount(prev => prev + 1);
+    console.log("使用了useCallback的函数");
   }, []);
 
   const handleTextChange = () => {
     setText(text + '!');
+    console.log("没有使用useCallback的函数");
   };
 
   return (

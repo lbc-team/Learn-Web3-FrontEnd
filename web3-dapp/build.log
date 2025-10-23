@@ -1,0 +1,66 @@
+
+> web3-dapp@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.4
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ⚠ Compiled with warnings in 20.5s
+
+./node_modules/@metamask/sdk/dist/browser/es/metamask-sdk.js
+Module not found: Can't resolve '@react-native-async-storage/async-storage' in '/Users/mac/Learn-Web3-FrontEnd/web3-dapp/node_modules/@metamask/sdk/dist/browser/es'
+
+Import trace for requested module:
+./node_modules/@metamask/sdk/dist/browser/es/metamask-sdk.js
+./node_modules/@wagmi/connectors/dist/esm/metaMask.js
+./node_modules/@wagmi/connectors/dist/esm/exports/index.js
+./node_modules/wagmi/dist/esm/exports/connectors.js
+./lib/wagmiClient.js
+./app/layout.js
+
+./node_modules/@metamask/sdk/dist/browser/es/metamask-sdk.js
+Module not found: Can't resolve '@react-native-async-storage/async-storage' in '/Users/mac/Learn-Web3-FrontEnd/web3-dapp/node_modules/@metamask/sdk/dist/browser/es'
+
+Import trace for requested module:
+./node_modules/@metamask/sdk/dist/browser/es/metamask-sdk.js
+./node_modules/@wagmi/connectors/dist/esm/metaMask.js
+./node_modules/@wagmi/connectors/dist/esm/exports/index.js
+./node_modules/wagmi/dist/esm/exports/connectors.js
+./lib/wagmiClient.js
+./app/layout.js
+
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/16) ...
+   Generating static pages (4/16) 
+   Generating static pages (8/16) 
+   Generating static pages (12/16) 
+ ✓ Generating static pages (16/16)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                      149 B         104 kB
+├ ○ /_not-found                             1 kB         105 kB
+├ ƒ /api/bridge/transfer                   149 B         104 kB
+├ ƒ /api/farm/stats                        149 B         104 kB
+├ ƒ /api/health                            149 B         104 kB
+├ ƒ /api/launchpad/projects                149 B         104 kB
+├ ƒ /api/stake/pools                       149 B         104 kB
+├ ƒ /api/token/price                       149 B         104 kB
+├ ○ /bridge                              4.37 kB         153 kB
+├ ○ /dashboard                           4.87 kB         154 kB
+├ ○ /farm                                4.38 kB         170 kB
+├ ○ /launchpad                              5 kB         170 kB
+├ ○ /pool                                3.72 kB         169 kB
+└ ○ /swap                                3.03 kB         168 kB
++ First Load JS shared by all             104 kB
+  ├ chunks/1255-ad92d48e3e7ce61a.js      45.5 kB
+  ├ chunks/4bd1b696-100b9d70ed4e49c1.js  54.2 kB
+  └ other shared chunks (total)          4.34 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
