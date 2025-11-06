@@ -5,7 +5,6 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { config } from '@/lib/wagmiClient'
 import Navbar from '@/components/Navbar'
-import ErrorFilter from '@/components/ErrorFilter'
 import './globals.css'
 import '@rainbow-me/rainbowkit/styles.css'
 import { useState } from 'react'
@@ -16,7 +15,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <ErrorFilter />
         <WagmiProvider config={config}>
           <QueryClientProvider client={queryClient}>
             <RainbowKitProvider>

@@ -64,7 +64,7 @@ export default function Home() {
           >
             Web3 RPC连接演示
           </a>
-          {/* <a
+          <a
             className={styles.primary}
             href="/viemDemo"
             style={{
@@ -120,7 +120,7 @@ export default function Home() {
             }}
           >
             钱包连接工具演示
-          </a> */}
+          </a>
         </div>
       </main>
     </div>

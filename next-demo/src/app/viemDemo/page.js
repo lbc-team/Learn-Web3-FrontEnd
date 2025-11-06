@@ -225,6 +225,7 @@ export default function ViemDemo() {
   }
 
   // 6. 读取 ERC20 合约数据
+  // ERC20 Token 地址：0xa7d726B7F1085F943056C2fB91abE0204eC6d6DA
   const readContractData = async () => {
     if (!privateKey) {
       setStatus('请输入私钥')
